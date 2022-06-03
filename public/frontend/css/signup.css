@@ -1,0 +1,174 @@
+section.sign {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+section.sign .container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+section.sign .container .forms {
+    width: 148%;
+    display: flex;
+    height: 600px;
+    align-items: center;
+    transition: height 0.4s ease;
+}
+
+section.sign .container .form {
+    width: 50%;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fff;
+    transition: margin-left 0.36s ease;
+}
+
+section.sign .container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.36s ease, opacity 0.3s ease;
+}
+
+section.sign .container .signup {
+    opacity: 0;
+    transition: opacity 0.18s ease;
+}
+
+section.sign .container.active .signup {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+section.sign .container.active .forms {
+    height: 600px;
+}
+
+section.sign .container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+section.sign .form .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #05B384;
+    border-radius: 25px;
+}
+
+section.sign .form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+section.sign .input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: border-bottom-color 0.4s ease;
+}
+
+section.sign .input-field input:is(:focus, :valid) {
+    border-bottom-color: #05B384;
+}
+
+section.sign .input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: color 0.4s ease;
+}
+
+section.sign .input-field input:is(:focus, :valid)~i {
+    color: #05B384;
+}
+
+section.sign .input-field i.icon {
+    left: 0;
+}
+
+section.sign .input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+section.sign .form .checkbox-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+section.sign .checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+section.sign .checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #05B384;
+}
+
+section.sign .form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+section.sign .form a.text {
+    color: #05B384;
+    text-decoration: none;
+}
+
+section.sign .form a {
+    text-decoration: none;
+}
+
+section.sign .form a:hover {
+    text-decoration: underline;
+}
+
+section.sign .form .button {
+    margin-top: 35px;
+}
+
+section.sign .form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #05B384;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+section.sign .button input:hover {
+    background-color: #05B384;
+}
+
+section.sign .form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
